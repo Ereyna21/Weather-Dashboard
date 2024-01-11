@@ -1,5 +1,6 @@
 # Weather-Dashboard-Challenge-6
 I was challenged to make a weather app
+
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history
@@ -17,7 +18,7 @@ I used these websites to refrence codes and help me build my portfolio. https://
 
 I have also addded a screenshot ![screenshot](image.png)
 
-Deployed Application link [] 
+Deployed Application link [] https://ereyna21.github.io/Weather-Dashboard/
 
 Repository link https://github.com/Ereyna21/Weather-Dashboard
 

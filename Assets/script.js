@@ -93,3 +93,10 @@ function getdata(cityName) {
 }
 
 startButton.addEventListener("click", startApp);
+
+inputField.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      startApp(event);
+    }
+  });
+  
