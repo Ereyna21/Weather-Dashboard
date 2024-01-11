@@ -1,0 +1,36 @@
+/* style.css */
+
+/* Add your custom CSS styles here */
+
+body {
+    /* Add body styles here */
+  }
+  
+  header {
+    /* Add header styles here */
+  }
+  
+  h1 {
+    text-align: -webkit-center;
+  }
+  
+  #weatherContainer {
+    position: absolute;
+    right: 0;
+  }
+  p {
+    /* Add p styles here */
+  }
+  
+  input {
+    /* Add input styles here */
+  }
+  
+  button {
+    /* Add button styles here */
+  }
+  div {
+    justify-content: center;
+  }
+
+  
