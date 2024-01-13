@@ -10,10 +10,12 @@ const celsiusToFahrenheit = (celsius) => {
 };
 
 const createWeatherCard = (cityName, weatherItem, index) => {
+    const date = new Date(weatherItem.dt_txt + ' UTC');
+
     if (index === 0) {
         return `<div class="mt-3 d-flex justify-content-between">
                     <div>
-                        <h3 class="fw-bold">${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h3>
+                        <h3 class="fw-bold">${cityName} (${date.toLocaleDateString()})</h3>
                         <h6 class="my-3 mt-3">Temperature: ${celsiusToFahrenheit(weatherItem.main.temp - 273.15).toFixed(2)}°F</h6>
                         <h6 class="my-3">Wind: ${weatherItem.wind.speed} MPH</h6>
                         <h6 class="my-3">Humidity: ${weatherItem.main.humidity}%</h6>
@@ -27,7 +29,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
         return `<div class="col mb-3">
                     <div class="card border-0 bg-secondary bg-gradient text-white">
                         <div class="card-body p-3 text-white">
-                            <h5 class="card-title fw-semibold">(${weatherItem.dt_txt.split(" ")[0]})</h5>
+                            <h5 class="card-title fw-semibold">(${date.toLocaleDateString()})</h5>
                             <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" alt="weather icon">
                             <h6 class="card-text my-3 mt-3">Temp: ${celsiusToFahrenheit(weatherItem.main.temp - 273.15).toFixed(2)}°F</h6>
                             <h6 class="card-text my-3">Wind: ${weatherItem.wind.speed} MPH</h6>
@@ -37,6 +39,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                 </div>`;
     }
 };
+
 // Get weather details of passed latitude and longitude
 const getWeatherDetails = (cityName, latitude, longitude) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
@@ -66,6 +69,7 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
         alert("An error occurred while fetching the weather forecast!");
     });
 }
+
 // Get coordinates of entered city name
 const getCityCoordinates = () => {
     const cityName = cityInput.value.trim();
@@ -80,6 +84,7 @@ const getCityCoordinates = () => {
         alert("An error occurred while fetching the coordinates!");
     });
 }
+
 searchButton.addEventListener("click", () => getCityCoordinates());
 
 // Add an event listener for the "Enter" key on the cityInput field

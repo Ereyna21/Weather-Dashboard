@@ -17,7 +17,7 @@ I used these websites to refrence codes and help me build my portfolio. https://
 
 
   
-I have also addded a screenshot ![screenshot](image.png)
+I have also addded a screenshot ![Screenshot](image.png)
 
 Deployed Application link [] https://ereyna21.github.io/Weather-Dashboard/
 
